@@ -1,0 +1,15 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    <h1>Список сообщений</h1>
+    <br>
+        <a href="/">Вернуться на главную страницу</a>
+    <br>
+    <br>
+
+    <ul>
+        {% for message in messages %}
+            <li>{{ message.getText() }} Дата создания: {{ message.getDate() }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
